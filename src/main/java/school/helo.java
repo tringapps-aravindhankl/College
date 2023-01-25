@@ -17,7 +17,7 @@ class Student {
         System.out.println(name + " has a " + gpa + " GPA");
     }
 }
-public class helo
+public class Helo
 {
     public static void main( String[] args )
     {
