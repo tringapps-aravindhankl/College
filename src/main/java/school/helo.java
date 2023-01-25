@@ -23,25 +23,25 @@ public class Helo
     {
     	Scanner scan = new Scanner(System.in);
 
-        System.out.println("enter your name");
+        logger.log("enter your name");
         String name = scan.nextLine();
 
-        System.out.println("enter your Grade");
+        logger.log("enter your Grade");
         char grad = scan.next().charAt(0);
 
-        System.out.println("enter your GPA");
+        logger.log("enter your GPA");
         float gpa = scan.nextFloat();
 
         Student a = new Student(name, grad, gpa);
 
-        System.out.println("Do you update GPA? 1.yes  2.no");
+        logger.log("Do you update GPA? 1.yes  2.no");
         int option = scan.nextInt();
         if (option == 1) {
-            System.out.println("enter GPA");
+            logger.log("enter GPA");
             float mark = scan.nextFloat();
             a.update(mark);
         } else {
-            System.out.println("thank you");
+            logger.logln("thank you");
         }
 
     }
