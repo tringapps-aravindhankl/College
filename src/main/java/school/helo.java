@@ -14,7 +14,7 @@ class Student {
 
     void update(float a) {
         gpa = a;
-        logger.log(name + " has a " + gpa + " GPA");
+        System.out.println(name + " has a " + gpa + " GPA");
     }
 }
 public class Helo
@@ -23,13 +23,13 @@ public class Helo
     {
     	Scanner scan = new Scanner(System.in);
 
-        logger.log("enter your name");
+        System.out.println("enter your name");
         String name = scan.nextLine();
 
-        logger.log("enter your Grade");
+        System.out.println("enter your Grade");
         char grad = scan.next().charAt(0);
 
-        logger.log("enter your GPA");
+        System.out.println("enter your GPA");
         float gpa = scan.nextFloat();
 
         Student a = new Student(name, grad, gpa);
@@ -37,11 +37,11 @@ public class Helo
         logger.log("Do you update GPA? 1.yes  2.no");
         int option = scan.nextInt();
         if (option == 1) {
-            logger.log("enter GPA");
+            System.out.println("enter GPA");
             float mark = scan.nextFloat();
             a.update(mark);
         } else {
-            logger.logln("thank you");
+            System.out.println("thank you");
         }
 
     }
