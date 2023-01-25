@@ -24,15 +24,15 @@ public class helo
     	Scanner scan = new Scanner(System.in);
 
         System.out.println("enter your name");
-        String Name = scan.nextLine();
+        String name = scan.nextLine();
 
         System.out.println("enter your Grade");
-        char Grad = scan.next().charAt(0);
+        char grad = scan.next().charAt(0);
 
         System.out.println("enter your GPA");
-        float Gpa = scan.nextFloat();
+        float gpa = scan.nextFloat();
 
-        Student a = new Student(Name, Grad, Gpa);
+        Student a = new Student(name, grad, gpa);
 
         System.out.println("Do you update GPA? 1.yes  2.no");
         int option = scan.nextInt();
