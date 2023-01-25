@@ -14,7 +14,7 @@ class Student {
 
     void update(float a) {
         gpa = a;
-        System.out.println(name + " has a " + gpa + " GPA");
+        logger.log(name + " has a " + gpa + " GPA");
     }
 }
 public class Helo
