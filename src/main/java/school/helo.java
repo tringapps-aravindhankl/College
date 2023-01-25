@@ -23,13 +23,13 @@ public class Helo
     {
     	Scanner scan = new Scanner(System.in);
 
-        System.out.println("enter your name");
+        System.err.println("enter your name");
         String name = scan.nextLine();
 
-        System.out.println("enter your Grade");
+        System.err.println("enter your Grade");
         char grad = scan.next().charAt(0);
 
-        System.out.println("enter your GPA");
+        System.err.println("enter your GPA");
         float gpa = scan.nextFloat();
 
         Student a = new Student(name, grad, gpa);
