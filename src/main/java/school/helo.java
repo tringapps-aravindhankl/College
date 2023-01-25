@@ -14,7 +14,7 @@ class Student {
 
     void update(float a) {
         gpa = a;
-        System.err.println(name + " has a " + gpa + " GPA");
+        System.out.println(name + " has a " + gpa + " GPA");
     }
 }
 public class Helo
@@ -23,13 +23,13 @@ public class Helo
     {
     	Scanner scan = new Scanner(System.in);
 
-        System.err.println("enter your name");
+        System.out.println("enter your name");
         String name = scan.nextLine();
 
-        System.err.println("enter your Grade");
+        System.out.println("enter your Grade");
         char grad = scan.next().charAt(0);
 
-        System.err.println("enter your GPA");
+        System.out.println("enter your GPA");
         float gpa = scan.nextFloat();
 
         Student a = new Student(name, grad, gpa);
