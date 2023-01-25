@@ -29,7 +29,7 @@ public class Helo
         System.out.println("enter your Grade");
         char grad = scan.next().charAt(0);
 
-        System.err.println("enter your GPA");
+        System.out.println("enter your GPA");
         float gpa = scan.nextFloat();
 
         Student a = new Student(name, grad, gpa);
