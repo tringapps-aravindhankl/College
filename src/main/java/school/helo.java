@@ -1,6 +1,6 @@
 package school;
 import java.util.Scanner;
-import.java.util.logging.*;
+import java.util.logging.*;
 
 class Student {
     String name;
