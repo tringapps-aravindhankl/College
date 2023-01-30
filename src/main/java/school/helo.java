@@ -15,7 +15,7 @@ class Student {
 
     void update(float a) {
         gpa = a;
-        log.info(name + " has a " + gpa + " GPA");
+        log.fine("{} has a {} GPA",name,gpa);
     }
 }
 public class Helo
