@@ -1,11 +1,12 @@
 package school;
 import java.util.Scanner;
+import.java.util.logging.*;
 
 class Student {
     String name;
     char grade;
     float gpa;
-
+    Logger log=Logger.getLogger("hi");
     Student(String a, char b, float c) {
         name = a;
         grade = b;
@@ -14,7 +15,7 @@ class Student {
 
     void update(float a) {
         gpa = a;
-        System.out.println(name + " has a " + gpa + " GPA");
+        log.info(name + " has a " + gpa + " GPA");
     }
 }
 public class Helo
@@ -22,26 +23,27 @@ public class Helo
     public static void main( String[] args )
     {
     	Scanner scan = new Scanner(System.in);
+        Logger log=Logger.getLogger("hi");
 
-        System.out.println("enter your name");
+        log.info("enter your name");
         String name = scan.nextLine();
 
-        System.out.println("enter your Grade");
+        log.info("enter your Grade");
         char grad = scan.next().charAt(0);
 
-        System.out.println("enter your GPA");
+        log.info("enter your GPA");
         float gpa = scan.nextFloat();
 
         Student a = new Student(name, grad, gpa);
 
-        logger.log("Do you update GPA? 1.yes  2.no");
+        log.info("Do you update GPA? 1.yes  2.no");
         int option = scan.nextInt();
         if (option == 1) {
-            System.out.println("enter GPA");
+            log.info("enter GPA");
             float mark = scan.nextFloat();
             a.update(mark);
         } else {
-            System.out.println("thank you");
+              log.info("thank you");
         }
 
     }
