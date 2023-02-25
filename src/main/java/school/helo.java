@@ -7,15 +7,15 @@ class Student {
     char grade;
     float gpa;
     Logger log=Logger.getLogger("hi");
-    Student(String a, char b, float c) {
-        name = a;
-        grade = b;
-        gpa = c;
+    Student(String name, char grade, float gpa) {
+        this.name = name;
+        this.grade = grade;
+        this.gpa = gpa;
     }
 
-    void update(float a) {
-        gpa = a;
-        log.fine("{} has a {} GPA",name,gpa);
+    void update(float mark) {
+        gpa = mark;
+        log.log(Level.INFO,()->name+gpa+"has a GPA");
     }
 }
 public class Helo
@@ -24,7 +24,7 @@ public class Helo
     {
     	Scanner scan = new Scanner(System.in);
         Logger log=Logger.getLogger("hi");
-
+        try {
         log.info("enter your name");
         String name = scan.nextLine();
 
@@ -33,17 +33,26 @@ public class Helo
 
         log.info("enter your GPA");
         float gpa = scan.nextFloat();
-
-        Student a = new Student(name, grad, gpa);
+        log.log(Level.INFO,()->name+"GPA:) is"+gpa);
+        Student object = new Student(name, grad, gpa);
 
         log.info("Do you update GPA? 1.yes  2.no");
         int option = scan.nextInt();
-        if (option == 1) {
+        if (option == 1) 
+        {
             log.info("enter GPA");
             float mark = scan.nextFloat();
-            a.update(mark);
-        } else {
-              log.info("thank you");
+            object.update(mark);
+        } 
+        else 
+        {
+              log.info("Thank you");
+        }
+        }
+        catch(Exception e)
+        {
+        	log.info(String.valueOf(e));
+        	System.exit(0);    
         }
 
     }
